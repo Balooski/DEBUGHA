@@ -1,0 +1,758 @@
+~ # dmesg
+[    0.000000] Booting Linux on physical CPU 0x0000000000 [0x410fd083]
+[    0.000000] Linux version 6.6.31-haos-raspi (builder@0c7d95292fe8) (aarch64-buildroot-linux-gnu-gcc.br_real (Buildroot -gbaa16784) 12.3.0, GNU ld (GNU Binutils) 2.40) #1 SMP PREEMPT Tue Aug 13 16:06:22 UTC 2024
+[    0.000000] KASLR enabled
+[    0.000000] random: crng init done
+[    0.000000] Machine model: Raspberry Pi 4 Model B Rev 1.4
+[    0.000000] efi: UEFI not found.
+[    0.000000] Reserved memory: created CMA memory pool at 0x000000000ec00000, size 512 MiB
+[    0.000000] OF: reserved mem: initialized node linux,cma, compatible id shared-dma-pool
+[    0.000000] OF: reserved mem: 0x000000000ec00000..0x000000002ebfffff (524288 KiB) map reusable linux,cma
+[    0.000000] OF: reserved mem: 0x000000003ee646a0..0x000000003ee64a9f (1 KiB) nomap non-reusable nvram@1
+[    0.000000] OF: reserved mem: 0x000000003ee64ae0..0x000000003ee64b27 (0 KiB) nomap non-reusable nvram@0
+[    0.000000] Zone ranges:
+[    0.000000]   DMA      [mem 0x0000000000000000-0x000000003fffffff]
+[    0.000000]   DMA32    [mem 0x0000000040000000-0x00000000ffffffff]
+[    0.000000]   Normal   [mem 0x0000000100000000-0x00000001ffffffff]
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000000000000-0x000000003b2fffff]
+[    0.000000]   node   0: [mem 0x0000000040000000-0x00000000fbffffff]
+[    0.000000]   node   0: [mem 0x0000000100000000-0x00000001ffffffff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000000000000-0x00000001ffffffff]
+[    0.000000] On node 0, zone DMA32: 19712 pages in unavailable ranges
+[    0.000000] On node 0, zone Normal: 16384 pages in unavailable ranges
+[    0.000000] percpu: Embedded 30 pages/cpu s85736 r8192 d28952 u122880
+[    0.000000] pcpu-alloc: s85736 r8192 d28952 u122880 alloc=30*4096
+[    0.000000] pcpu-alloc: [0] 0 [0] 1 [0] 2 [0] 3
+[    0.000000] Detected PIPT I-cache on CPU0
+[    0.000000] CPU features: detected: Spectre-v2
+[    0.000000] CPU features: detected: Spectre-v3a
+[    0.000000] CPU features: detected: Spectre-v4
+[    0.000000] CPU features: detected: Spectre-BHB
+[    0.000000] CPU features: kernel page table isolation forced ON by KASLR
+[    0.000000] CPU features: detected: Kernel page table isolation (KPTI)
+[    0.000000] CPU features: detected: ARM erratum 1742098
+[    0.000000] CPU features: detected: ARM errata 1165522, 1319367, or 1530923
+[    0.000000] alternatives: applying boot alternatives
+[    0.000000] Kernel command line: zram.enabled=1 zram.num_devices=3 rootwait systemd.machine_id=db3f75bd4af9463dad7ce56bc4312948 cgroup_enable=memory fsck.repair=yes  coherent_pool=1M 8250.nr_uarts=0 snd_bcm2835.enable_headphones=0 snd_bcm2835.enable_headphones=1 snd_bcm2835.enable_hdmi=1 clk_ignore_unused  smsc95xx.macaddr=DC:A6:32:CB:A2:33 vc_mem.mem_base=0x3eb00000 vc_mem.mem_size=0x3ff00000  dwc_otg.lpm_enable=0 console=tty0 usb-storage.quirks=174c:55aa:u,2109:0715:u,152d:0578:u,152d:0579:u,152d:1561:u,174c:0829:u,14b0:0206:u,174c:225c:u,7825:a2a4:u,152d:0562:u,125f:a88a:u root=PARTUUID=8d3d53e3-6d49-4c38-8349-aff6859e82fd ro rauc.slot=A
+[    0.000000] cgroup: Enabling memory control group subsystem
+[    0.000000] Dentry cache hash table entries: 1048576 (order: 11, 8388608 bytes, linear)
+[    0.000000] Inode-cache hash table entries: 524288 (order: 10, 4194304 bytes, linear)
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 2028596
+[    0.000000] mem auto-init: stack:all(zero), heap alloc:off, heap free:off
+[    0.000000] software IO TLB: area num 4.
+[    0.000000] software IO TLB: mapped [mem 0x0000000037300000-0x000000003b300000] (64MB)
+[    0.000000] Memory: 7464744K/8244224K available (14976K kernel code, 2296K rwdata, 4788K rodata, 5184K init, 1107K bss, 255192K reserved, 524288K cma-reserved)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+[    0.000000] ftrace: allocating 48077 entries in 188 pages
+[    0.000000] ftrace: allocated 188 pages with 5 groups
+[    0.000000] trace event string verifier disabled
+[    0.000000] rcu: Preemptible hierarchical RCU implementation.
+[    0.000000] rcu:     RCU event tracing is enabled.
+[    0.000000] rcu:     RCU restricting CPUs from NR_CPUS=256 to nr_cpu_ids=4.
+[    0.000000]  Trampoline variant of Tasks RCU enabled.
+[    0.000000]  Rude variant of Tasks RCU enabled.
+[    0.000000]  Tracing variant of Tasks RCU enabled.
+[    0.000000] rcu: RCU calculated value of scheduler-enlistment delay is 25 jiffies.
+[    0.000000] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=4
+[    0.000000] NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0
+[    0.000000] Root IRQ handler: gic_handle_irq
+[    0.000000] GIC: Using split EOI/Deactivate mode
+[    0.000000] rcu: srcu_init: Setting srcu_struct sizes based on contention.
+[    0.000000] arch_timer: cp15 timer(s) running at 54.00MHz (phys).
+[    0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0xc743ce346, max_idle_ns: 440795203123 ns
+[    0.000001] sched_clock: 56 bits at 54MHz, resolution 18ns, wraps every 4398046511102ns
+[    0.000329] Console: colour dummy device 80x25
+[    0.000343] printk: console [tty0] enabled
+[    0.001020] Calibrating delay loop (skipped), value calculated using timer frequency.. 108.00 BogoMIPS (lpj=216000)
+[    0.001053] pid_max: default: 32768 minimum: 301
+[    0.001136] LSM: initializing lsm=capability,apparmor,integrity
+[    0.001269] AppArmor: AppArmor initialized
+[    0.001530] Mount-cache hash table entries: 16384 (order: 5, 131072 bytes, linear)
+[    0.001664] Mountpoint-cache hash table entries: 16384 (order: 5, 131072 bytes, linear)
+[    0.003842] RCU Tasks: Setting shift to 2 and lim to 1 rcu_task_cb_adjust=1.
+[    0.004014] RCU Tasks Rude: Setting shift to 2 and lim to 1 rcu_task_cb_adjust=1.
+[    0.004152] RCU Tasks Trace: Setting shift to 2 and lim to 1 rcu_task_cb_adjust=1.
+[    0.004423] rcu: Hierarchical SRCU implementation.
+[    0.004442] rcu:     Max phase no-delay instances is 1000.
+[    0.006325] EFI services will not be available.
+[    0.006665] smp: Bringing up secondary CPUs ...
+[    0.007289] Detected PIPT I-cache on CPU1
+[    0.007420] CPU1: Booted secondary processor 0x0000000001 [0x410fd083]
+[    0.008148] Detected PIPT I-cache on CPU2
+[    0.008239] CPU2: Booted secondary processor 0x0000000002 [0x410fd083]
+[    0.008899] Detected PIPT I-cache on CPU3
+[    0.008991] CPU3: Booted secondary processor 0x0000000003 [0x410fd083]
+[    0.009075] smp: Brought up 1 node, 4 CPUs
+[    0.009153] SMP: Total of 4 processors activated.
+[    0.009169] CPU features: detected: 32-bit EL0 Support
+[    0.009182] CPU features: detected: 32-bit EL1 Support
+[    0.009199] CPU features: detected: CRC32 instructions
+[    0.009312] CPU: All CPU(s) started at EL2
+[    0.009337] alternatives: applying system-wide alternatives
+[    0.012040] devtmpfs: initialized
+[    0.021792] Enabled cp15_barrier support
+[    0.021847] Enabled setend support
+[    0.022022] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+[    0.022060] futex hash table entries: 1024 (order: 4, 65536 bytes, linear)
+[    0.034819] pinctrl core: initialized pinctrl subsystem
+[    0.035391] DMI not present or invalid.
+[    0.035884] NET: Registered PF_NETLINK/PF_ROUTE protocol family
+[    0.037840] DMA: preallocated 1024 KiB GFP_KERNEL pool for atomic allocations
+[    0.038116] DMA: preallocated 1024 KiB GFP_KERNEL|GFP_DMA pool for atomic allocations
+[    0.038552] DMA: preallocated 1024 KiB GFP_KERNEL|GFP_DMA32 pool for atomic allocations
+[    0.038614] audit: initializing netlink subsys (disabled)
+[    0.038801] audit: type=2000 audit(0.036:1): state=initialized audit_enabled=0 res=1
+[    0.039302] thermal_sys: Registered thermal governor 'step_wise'
+[    0.039352] cpuidle: using governor menu
+[    0.039642] hw-breakpoint: found 6 breakpoint and 4 watchpoint registers.
+[    0.039769] ASID allocator initialised with 32768 entries
+[    0.040775] Serial: AMBA PL011 UART driver
+[    0.046671] bcm2835-mbox fe00b880.mailbox: mailbox enabled
+[    0.056776] raspberrypi-firmware soc:firmware: Attached to firmware from 2024-05-24T15:30:04, variant start
+[    0.060794] raspberrypi-firmware soc:firmware: Firmware hash is 4942b7633c0ff1af1ee95a51a33b56a9dae47529
+[    0.070930] Modules: 2G module region forced by RANDOMIZE_MODULE_REGION_FULL
+[    0.070960] Modules: 0 pages in range for non-PLT usage
+[    0.070966] Modules: 517152 pages in range for PLT usage
+[    0.077218] bcm2835-dma fe007000.dma-controller: DMA legacy API manager, dmachans=0x1
+[    0.078897] iommu: Default domain type: Translated
+[    0.078918] iommu: DMA domain TLB invalidation policy: strict mode
+[    0.079275] SCSI subsystem initialized
+[    0.079454] usbcore: registered new interface driver usbfs
+[    0.080752] usbcore: registered new interface driver hub
+[    0.080825] usbcore: registered new device driver usb
+[    0.081155] mc: Linux media interface: v0.10
+[    0.081218] videodev: Linux video capture interface: v2.00
+[    0.081297] pps_core: LinuxPPS API ver. 1 registered
+[    0.081313] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.081344] PTP clock support registered
+[    0.082605] vgaarb: loaded
+[    0.083090] clocksource: Switched to clocksource arch_sys_counter
+[    0.083492] VFS: Disk quotas dquot_6.6.0
+[    0.083593] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    0.083713] FS-Cache: Loaded
+[    0.087153] CacheFiles: Loaded
+[    0.087697] AppArmor: AppArmor Filesystem Enabled
+[    0.095212] NET: Registered PF_INET protocol family
+[    0.096217] IP idents hash table entries: 131072 (order: 8, 1048576 bytes, linear)
+[    0.104694] tcp_listen_portaddr_hash hash table entries: 4096 (order: 4, 65536 bytes, linear)
+[    0.104816] Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+[    0.104908] TCP established hash table entries: 65536 (order: 7, 524288 bytes, linear)
+[    0.105393] TCP bind hash table entries: 65536 (order: 9, 2097152 bytes, linear)
+[    0.107946] TCP: Hash tables configured (established 65536 bind 65536)
+[    0.108549] MPTCP token hash table entries: 8192 (order: 5, 196608 bytes, linear)
+[    0.108905] UDP hash table entries: 4096 (order: 5, 131072 bytes, linear)
+[    0.109041] UDP-Lite hash table entries: 4096 (order: 5, 131072 bytes, linear)
+[    0.109340] NET: Registered PF_UNIX/PF_LOCAL protocol family
+[    0.109972] RPC: Registered named UNIX socket transport module.
+[    0.109996] RPC: Registered udp transport module.
+[    0.110010] RPC: Registered tcp transport module.
+[    0.110024] RPC: Registered tcp-with-tls transport module.
+[    0.110038] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    0.110064] PCI: CLS 0 bytes, default 64
+[    0.110763] kvm [1]: IPA Size Limit: 44 bits
+[    0.112148] kvm [1]: vgic interrupt IRQ9
+[    0.112203] kvm [1]: Hyp mode initialized successfully
+[    1.221679] Initialise system trusted keyrings
+[    1.221986] workingset: timestamp_bits=46 max_order=21 bucket_order=0
+[    1.222069] zbud: loaded
+[    1.222459] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    1.222782] NFS: Registering the id_resolver key type
+[    1.222818] Key type id_resolver registered
+[    1.222833] Key type id_legacy registered
+[    1.222864] nfs4filelayout_init: NFSv4 File Layout Driver Registering...
+[    1.222891] nfs4flexfilelayout_init: NFSv4 Flexfile Layout Driver Registering...
+[    1.224352] Key type asymmetric registered
+[    1.224378] Asymmetric key parser 'x509' registered
+[    1.224436] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 246)
+[    1.224596] io scheduler mq-deadline registered
+[    1.224616] io scheduler kyber registered
+[    1.224664] io scheduler bfq registered
+[    1.227711] pinctrl-bcm2835 fe200000.gpio: GPIO_OUT persistence: yes
+[    1.229731] brcm-pcie fd500000.pcie: host bridge /scb/pcie@7d500000 ranges:
+[    1.229772] brcm-pcie fd500000.pcie:   No bus range found for /scb/pcie@7d500000, using [bus 00-ff]
+[    1.229826] brcm-pcie fd500000.pcie:      MEM 0x0600000000..0x063fffffff -> 0x00c0000000
+[    1.229892] brcm-pcie fd500000.pcie:   IB MEM 0x0000000000..0x00bfffffff -> 0x0400000000
+[    1.230891] brcm-pcie fd500000.pcie: PCI host bridge to bus 0000:00
+[    1.230921] pci_bus 0000:00: root bus resource [bus 00-ff]
+[    1.230943] pci_bus 0000:00: root bus resource [mem 0x600000000-0x63fffffff] (bus address [0xc0000000-0xffffffff])
+[    1.231004] pci 0000:00:00.0: [14e4:2711] type 01 class 0x060400
+[    1.231149] pci 0000:00:00.0: PME# supported from D0 D3hot
+[    1.234708] pci_bus 0000:01: supply vpcie3v3 not found, using dummy regulator
+[    1.234859] pci_bus 0000:01: supply vpcie3v3aux not found, using dummy regulator
+[    1.234947] pci_bus 0000:01: supply vpcie12v not found, using dummy regulator
+[    1.345169] brcm-pcie fd500000.pcie: link up, 5.0 GT/s PCIe x1 (SSC)
+[    1.345318] pci 0000:01:00.0: [1106:3483] type 00 class 0x0c0330
+[    1.345423] pci 0000:01:00.0: reg 0x10: [mem 0x00000000-0x00000fff 64bit]
+[    1.345722] pci 0000:01:00.0: PME# supported from D0 D3hot
+[    1.355195] pci 0000:00:00.0: BAR 8: assigned [mem 0x600000000-0x6000fffff]
+[    1.355228] pci 0000:01:00.0: BAR 0: assigned [mem 0x600000000-0x600000fff 64bit]
+[    1.355300] pci 0000:00:00.0: PCI bridge to [bus 01]
+[    1.355320] pci 0000:00:00.0:   bridge window [mem 0x600000000-0x6000fffff]
+[    1.355595] pcieport 0000:00:00.0: enabling device (0000 -> 0002)
+[    1.355758] pcieport 0000:00:00.0: PME: Signaling with IRQ 26
+[    1.356043] pcieport 0000:00:00.0: AER: enabled with IRQ 26
+[    1.364929] iproc-rng200 fe104000.rng: hwrng registered
+[    1.365165] vc-mem: phys_addr:0x00000000 mem_base=0x3eb00000 mem_size:0x3ff00000(1023 MiB)
+[    1.375946] brd: module loaded
+[    1.382262] loop: module loaded
+[    1.382776] zram: Added device: zram0
+[    1.383274] zram: Added device: zram1
+[    1.383732] zram: Added device: zram2
+[    1.384275] Loading iSCSI transport class v2.0-870.
+[    1.386995] tun: Universal TUN/TAP device driver, 1.6
+[    1.387569] igb: Intel(R) Gigabit Ethernet Network Driver
+[    1.387589] igb: Copyright (c) 2007-2014 Intel Corporation.
+[    1.435071] xhci_hcd 0000:01:00.0: xHCI Host Controller
+[    1.435135] xhci_hcd 0000:01:00.0: new USB bus registered, assigned bus number 1
+[    1.436886] xhci_hcd 0000:01:00.0: hcc params 0x002841eb hci version 0x100 quirks 0x0700240000000890
+[    1.437621] xhci_hcd 0000:01:00.0: xHCI Host Controller
+[    1.437650] xhci_hcd 0000:01:00.0: new USB bus registered, assigned bus number 2
+[    1.437680] xhci_hcd 0000:01:00.0: Host supports USB 3.0 SuperSpeed
+[    1.437934] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 6.06
+[    1.437964] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    1.437987] usb usb1: Product: xHCI Host Controller
+[    1.438004] usb usb1: Manufacturer: Linux 6.6.31-haos-raspi xhci-hcd
+[    1.438022] usb usb1: SerialNumber: 0000:01:00.0
+[    1.438589] hub 1-0:1.0: USB hub found
+[    1.438640] hub 1-0:1.0: 1 port detected
+[    1.439215] usb usb2: New USB device found, idVendor=1d6b, idProduct=0003, bcdDevice= 6.06
+[    1.439247] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    1.439269] usb usb2: Product: xHCI Host Controller
+[    1.439286] usb usb2: Manufacturer: Linux 6.6.31-haos-raspi xhci-hcd
+[    1.439304] usb usb2: SerialNumber: 0000:01:00.0
+[    1.439745] hub 2-0:1.0: USB hub found
+[    1.439794] hub 2-0:1.0: 4 ports detected
+[    1.440647] dwc_otg: version 3.00a 10-AUG-2012 (platform bus)
+[    1.440750] dwc_otg: FIQ enabled
+[    1.440757] dwc_otg: NAK holdoff enabled
+[    1.440762] dwc_otg: FIQ split-transaction FSM enabled
+[    1.440772] Module dwc_common_port init
+[    1.441381] usbcore: registered new interface driver uas
+[    1.441450] usbcore: registered new interface driver usb-storage
+[    1.441555] usbcore: registered new interface driver usbserial_generic
+[    1.441595] usbserial: USB Serial support registered for generic
+[    1.441997] mousedev: PS/2 mouse device common for all mice
+[    1.442371] Driver for 1-wire Dallas network protocol.
+[    1.443638] device-mapper: ioctl: 4.48.0-ioctl (2023-03-01) initialised: dm-devel@redhat.com
+[    1.446007] sdhci: Secure Digital Host Controller Interface driver
+[    1.446038] sdhci: Copyright(c) Pierre Ossman
+[    1.446236] sdhci-pltfm: SDHCI platform and OF driver helper
+[    1.452716] ledtrig-cpu: registered to indicate activity on CPUs
+[    1.452831] hid: raw HID events driver (C) Jiri Kosina
+[    1.452939] usbcore: registered new interface driver usbhid
+[    1.452946] usbhid: USB HID core driver
+[    1.455469] hw perfevents: enabled with armv8_cortex_a72 PMU driver, 7 counters available
+[    1.458222] IPVS: Registered protocols (TCP, UDP, SCTP, AH, ESP)
+[    1.458242] IPVS: Connection hash table configured (size=4096, memory=32Kbytes)
+[    1.458330] IPVS: ipvs loaded.
+[    1.458336] IPVS: [rr] scheduler registered.
+[    1.458439] NET: Registered PF_INET6 protocol family
+[    1.458836] Segment Routing with IPv6
+[    1.458854] In-situ OAM (IOAM) with IPv6
+[    1.458909] NET: Registered PF_PACKET protocol family
+[    1.458932] Bridge firewalling registered
+[    1.458973] Key type dns_resolver registered
+[    1.474385] registered taskstats version 1
+[    1.474544] Loading compiled-in X.509 certificates
+[    1.477282] zswap: loaded using pool lz4/zsmalloc
+[    1.481439] Key type .fscrypt registered
+[    1.481462] Key type fscrypt-provisioning registered
+[    1.481520] AppArmor: AppArmor sha1 policy hashing enabled
+[    1.485376] uart-pl011 fe201000.serial: there is not valid maps for state default
+[    1.485587] uart-pl011 fe201000.serial: cts_event_workaround enabled
+[    1.485777] fe201000.serial: ttyAMA1 at MMIO 0xfe201000 (irq = 33, base_baud = 0) is a PL011 rev2
+[    1.485885] serial serial0: tty port ttyAMA1 registered
+[    1.486979] bcm2835-wdt bcm2835-wdt: Broadcom BCM2835 watchdog timer
+[    1.487108] bcm2835-power bcm2835-power: Broadcom BCM2835 power domains driver
+[    1.487650] mmc-bcm2835 fe300000.mmcnr: mmc_debug:0 mmc_debug2:0
+[    1.487661] mmc-bcm2835 fe300000.mmcnr: DMA channel allocated
+[    1.515430] printk: console [netcon0] enabled
+[    1.515475] netconsole: network logging started
+[    1.515498] of_cfs_init
+[    1.515620] of_cfs_init: OK
+[    1.515896] clk: Not disabling unused clocks
+[    1.551875] mmc0: SDHCI controller on fe340000.mmc [fe340000.mmc] using ADMA
+[    1.552091] Waiting for root device PARTUUID=8d3d53e3-6d49-4c38-8349-aff6859e82fd...
+[    1.592001] mmc1: new high speed SDIO card at address 0001
+[    1.699151] usb 1-1: new high-speed USB device number 2 using xhci_hcd
+[    1.849677] usb 1-1: New USB device found, idVendor=2109, idProduct=3431, bcdDevice= 4.21
+[    1.849714] usb 1-1: New USB device strings: Mfr=0, Product=1, SerialNumber=0
+[    1.849739] usb 1-1: Product: USB2.0 Hub
+[    1.851306] hub 1-1:1.0: USB hub found
+[    1.851640] hub 1-1:1.0: 4 ports detected
+[    1.975638] usb 2-1: new SuperSpeed USB device number 2 using xhci_hcd
+[    2.003340] usb 2-1: New USB device found, idVendor=0bda, idProduct=9210, bcdDevice=20.01
+[    2.003376] usb 2-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[    2.003399] usb 2-1: Product: RTL9210
+[    2.003417] usb 2-1: Manufacturer: Realtek
+[    2.003436] usb 2-1: SerialNumber: 012345678904
+[    2.006414] usb 2-1: Enable of device-initiated U1 failed.
+[    2.007166] usb 2-1: Enable of device-initiated U2 failed.
+[    2.147127] usb 1-1.2: new full-speed USB device number 3 using xhci_hcd
+[    2.254666] usb 1-1.2: New USB device found, idVendor=10c4, idProduct=ea60, bcdDevice= 1.00
+[    2.254700] usb 1-1.2: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[    2.254726] usb 1-1.2: Product: Sonoff Zigbee 3.0 USB Dongle Plus
+[    2.254746] usb 1-1.2: Manufacturer: ITead
+[    2.254764] usb 1-1.2: SerialNumber: 60bede1a7245ed1188d4c88f0a86e0b4
+[    2.415483] usb 2-1: Enable of device-initiated U1 failed.
+[    2.416238] usb 2-1: Enable of device-initiated U2 failed.
+[    2.433277] scsi host0: uas
+[    2.436859] scsi 0:0:0:0: Direct-Access     Realtek  RTL9210 NVME     1.00 PQ: 0 ANSI: 6
+[    2.476227] sd 0:0:0:0: [sda] 488397168 512-byte logical blocks: (250 GB/233 GiB)
+[    2.477680] sd 0:0:0:0: [sda] Write Protect is off
+[    2.477705] sd 0:0:0:0: [sda] Mode Sense: 37 00 00 08
+[    2.483039] sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+[    2.484399] sd 0:0:0:0: [sda] Preferred minimum I/O size 512 bytes
+[    2.484411] sd 0:0:0:0: [sda] Optimal transfer size 33553920 bytes
+[    2.497400]  sda: sda1 sda2 sda3 sda4 sda5 sda6 sda7 sda8
+[    2.498643] sd 0:0:0:0: [sda] Attached SCSI disk
+[    2.501566] F2FS-fs (sda3): Magic Mismatch, valid(0xf2f52010) - read(0xe0f5e1e2)
+[    2.501604] F2FS-fs (sda3): Can't find valid F2FS filesystem in 1th superblock
+[    2.501815] F2FS-fs (sda3): Magic Mismatch, valid(0xf2f52010) - read(0x34ffff81)
+[    2.501843] F2FS-fs (sda3): Can't find valid F2FS filesystem in 2th superblock
+[    2.502720] erofs: (device sda3): mounted with root inode @ nid 37.
+[    2.502785] VFS: Mounted root (erofs filesystem) readonly on device 8:3.
+[    2.502876] devtmpfs: mounted
+[    2.510036] Freeing unused kernel memory: 5184K
+[    2.510261] Run /sbin/init as init process
+[    2.510276]   with arguments:
+[    2.510281]     /sbin/init
+[    2.510287]   with environment:
+[    2.510292]     HOME=/
+[    2.510297]     TERM=linux
+[    2.633383] systemd[1]: System time before build time, advancing clock.
+[    2.672073] systemd[1]: systemd 254 running in system mode (+PAM -AUDIT -SELINUX +APPARMOR -IMA -SMACK +SECCOMP -GCRYPT -GNUTLS +OPENSSL -ACL +BLKID +CURL -ELFUTILS -FIDO2 -IDN2 -IDN +IPTC +KMOD +LIBCRYPTSETUP +LIBFDISK +PCRE2 -PWQUALITY -P11KIT -QRENCODE -TPM2 -BZIP2 -LZ4 -XZ +ZLIB -ZSTD -BPF_FRAMEWORK -XKBCOMMON -UTMP -SYSVINIT default-hierarchy=unified)
+[    2.672123] systemd[1]: Detected architecture arm64.
+[    2.672853] systemd[1]: Hostname set to <homeassistant>.
+[    2.673005] systemd[1]: Installed transient /etc/machine-id file.
+[    2.727900] systemd[1]: Using hardware watchdog 'Broadcom BCM2835 Watchdog timer', version 0, device /dev/watchdog0
+[    2.727979] systemd[1]: Watchdog running with a hardware timeout of 15s.
+[    2.917081] systemd[1]: Queued start job for default target Multi-User System.
+[    2.935477] systemd[1]: Created slice Slice /system/ha-cli.
+[    2.937405] systemd[1]: Created slice Slice /system/modprobe.
+[    2.939168] systemd[1]: Created slice Slice /system/systemd-fsck.
+[    2.941008] systemd[1]: Created slice Slice /system/systemd-growfs.
+[    2.942223] systemd[1]: Created slice User and Session Slice.
+[    2.942542] systemd[1]: Started Dispatch Password Requests to Console Directory Watch.
+[    2.942758] systemd[1]: Started Forward Password Requests to Wall Directory Watch.
+[    2.942915] systemd[1]: Expecting device /dev/disk/by-label/hassos-boot...
+[    2.943013] systemd[1]: Expecting device /dev/disk/by-label/hassos-data...
+[    2.943193] systemd[1]: Expecting device /dev/disk/by-label/hassos-overlay...
+[    2.943303] systemd[1]: Expecting device /dev/zram2...
+[    2.943423] systemd[1]: Reached target Local Encrypted Volumes.
+[    2.943581] systemd[1]: Reached target HassOS zram targets.
+[    2.943700] systemd[1]: Reached target Local Integrity Protected Volumes.
+[    2.943876] systemd[1]: Reached target NFS client services.
+[    2.944022] systemd[1]: Reached target Path Units.
+[    2.944152] systemd[1]: Reached target Preparation for Remote File Systems.
+[    2.944275] systemd[1]: Reached target Remote Encrypted Volumes.
+[    2.944388] systemd[1]: Reached target Remote File Systems.
+[    2.944505] systemd[1]: Reached target Remote Verity Protected Volumes.
+[    2.944639] systemd[1]: Reached target Slice Units.
+[    2.944818] systemd[1]: Reached target Local Verity Protected Volumes.
+[    2.946927] systemd[1]: Listening on D-Bus System Message Bus Socket.
+[    2.958901] systemd[1]: Listening on RPCbind Server Activation Socket.
+[    2.959382] systemd[1]: Reached target RPC Port Mapper.
+[    2.963263] systemd[1]: Listening on Process Core Dump Socket.
+[    2.964245] systemd[1]: Listening on Journal Audit Socket.
+[    2.964818] systemd[1]: Listening on Journal Socket (/dev/log).
+[    2.965340] systemd[1]: Listening on Journal Socket.
+[    2.969312] systemd[1]: Listening on udev Control Socket.
+[    2.969818] systemd[1]: Listening on udev Kernel Socket.
+[    2.970353] systemd[1]: Huge Pages File System was skipped because of an unmet condition check (ConditionPathExists=/sys/kernel/mm/hugepages).
+[    2.973533] systemd[1]: Mounting POSIX Message Queue File System...
+[    2.976934] systemd[1]: Mounting Kernel Debug File System...
+[    2.980763] systemd[1]: Mounting Kernel Trace File System...
+[    2.984628] systemd[1]: Starting D-Bus System Message Bus...
+[    2.988072] systemd[1]: Starting Create List of Static Device Nodes...
+[    2.991577] systemd[1]: Starting Load Kernel Module configfs...
+[    2.995507] systemd[1]: Starting Load Kernel Module drm...
+[    2.999820] systemd[1]: Starting Load Kernel Module efi_pstore...
+[    3.003992] systemd[1]: Starting Load Kernel Module fuse...
+[    3.011587] systemd[1]: Starting Journal Service...
+[    3.017715] systemd[1]: Starting Generate network units from Kernel command line...
+[    3.019258] fuse: init (API version 7.39)
+[    3.022916] systemd[1]: Starting Remount Root and Kernel File Systems...
+[    3.028172] systemd[1]: Starting Coldplug All udev Devices...
+[    3.034887] systemd[1]: Starting Disk Manager...
+[    3.042316] systemd[1]: Starting HassOS ZRAM tmp...
+[    3.048208] systemd[1]: Starting HassOS ZRAM var...
+[    3.060680] systemd[1]: Mounted POSIX Message Queue File System.
+[    3.061655] systemd[1]: Mounted Kernel Debug File System.
+[    3.062609] systemd[1]: Mounted Kernel Trace File System.
+[    3.064863] systemd[1]: Finished Create List of Static Device Nodes.
+[    3.067182] systemd[1]: modprobe@configfs.service: Deactivated successfully.
+[    3.071342] systemd[1]: Finished Load Kernel Module configfs.
+[    3.077492] systemd-journald[128]: Collecting audit messages is enabled.
+[    3.088357] systemd[1]: Started D-Bus System Message Bus.
+[    3.094282] systemd[1]: modprobe@drm.service: Deactivated successfully.
+[    3.094865] systemd[1]: Finished Load Kernel Module drm.
+[    3.096338] systemd[1]: modprobe@efi_pstore.service: Deactivated successfully.
+[    3.097672] zram2: detected capacity change from 0 to 32768
+[    3.098943] systemd[1]: Finished Load Kernel Module efi_pstore.
+[    3.100023] systemd[1]: modprobe@fuse.service: Deactivated successfully.
+[    3.100419] systemd[1]: Finished Load Kernel Module fuse.
+[    3.101295] systemd[1]: Finished Generate network units from Kernel command line.
+[    3.102113] systemd[1]: Finished Remount Root and Kernel File Systems.
+[    3.102935] systemd[1]: Reached target Preparation for Network.
+[    3.105964] systemd[1]: Mounting FUSE Control File System...
+[    3.109491] systemd[1]: Mounting Kernel Configuration File System...
+[    3.115624] systemd[1]: Starting Create Static Device Nodes in /dev gracefully...
+[    3.121488] systemd[1]: Mounted FUSE Control File System.
+[    3.121898] zram1: detected capacity change from 0 to 65536
+[    3.122516] systemd[1]: Mounted Kernel Configuration File System.
+[    3.150045] systemd[1]: Finished HassOS ZRAM tmp.
+[    3.154748] systemd[1]: Started Journal Service.
+[    3.250011] audit: type=1334 audit(1716846515.611:2): prog-id=6 op=LOAD
+[    3.250044] audit: type=1334 audit(1716846515.611:3): prog-id=7 op=LOAD
+[    3.616208] vc_sm_cma: module is from the staging directory, the quality is unknown, you have been warned.
+[    3.623125] rpi-gpiomem fe200000.gpiomem: window base 0xfe200000 size 0x00001000
+[    3.623132] bcmgenet fd580000.ethernet: GENET 5.0 EPHY: 0x0000
+[    3.623859] rpi-gpiomem fe200000.gpiomem: initialised 1 regions as /dev/gpiomem
+[    3.637123] bcm2835_vc_sm_cma_probe: Videocore shared memory driver
+[    3.640215] [vc_sm_connected_init]: start
+[    3.644065] rpivid_hevc: module is from the staging directory, the quality is unknown, you have been warned.
+[    3.644402] [vc_sm_connected_init]: installed successfully
+[    3.650291] rpivid feb10000.codec: Device registered as /dev/video19
+[    3.659706] bcm2835_mmal_vchiq: module is from the staging directory, the quality is unknown, you have been warned.
+[    3.662834] snd_bcm2835: module is from the staging directory, the quality is unknown, you have been warned.
+[    3.664644] bcm2835_isp: module is from the staging directory, the quality is unknown, you have been warned.
+[    3.664940] bcm2835_codec: module is from the staging directory, the quality is unknown, you have been warned.
+[    3.671629] bcm2835-isp bcm2835-isp: Device node output[0] registered as /dev/video13
+[    3.679376] bcm2835-codec bcm2835-codec: Device registered as /dev/video10
+[    3.679426] bcm2835-codec bcm2835-codec: Loaded V4L2 decode
+[    3.683367] bcm2835_v4l2: module is from the staging directory, the quality is unknown, you have been warned.
+[    3.686322] bcm2835-codec bcm2835-codec: Device registered as /dev/video11
+[    3.686366] bcm2835-codec bcm2835-codec: Loaded V4L2 encode
+[    3.697657] bcm2835-isp bcm2835-isp: Device node capture[0] registered as /dev/video14
+[    3.701110] bcm2835-codec bcm2835-codec: Device registered as /dev/video12
+[    3.701161] bcm2835-codec bcm2835-codec: Loaded V4L2 isp
+[    3.702172] bcm2835_audio bcm2835_audio: card created with 8 channels
+[    3.704469] bcm2835-isp bcm2835-isp: Device node capture[1] registered as /dev/video15
+[    3.708441] bcm2835-codec bcm2835-codec: Device registered as /dev/video18
+[    3.708483] bcm2835-codec bcm2835-codec: Loaded V4L2 image_fx
+[    3.715225] bcm2835-codec bcm2835-codec: Device registered as /dev/video31
+[    3.715278] bcm2835-codec bcm2835-codec: Loaded V4L2 encode_image
+[    3.736462] usbcore: registered new interface driver cp210x
+[    3.736528] usbserial: USB Serial support registered for cp210x
+[    3.736589] cp210x 1-1.2:1.0: cp210x converter detected
+[    3.739389] bcm2835-isp bcm2835-isp: Device node stats[2] registered as /dev/video16
+[    3.739436] bcm2835-isp bcm2835-isp: Register output node 0 with media controller
+[    3.739452] bcm2835-isp bcm2835-isp: Register capture node 1 with media controller
+[    3.739461] bcm2835-isp bcm2835-isp: Register capture node 2 with media controller
+[    3.739470] bcm2835-isp bcm2835-isp: Register capture node 3 with media controller
+[    3.757156] bcm2835-isp bcm2835-isp: Device node output[0] registered as /dev/video20
+[    3.757160] usb 1-1.2: cp210x converter now attached to ttyUSB0
+[    3.757537] bcm2835-isp bcm2835-isp: Device node capture[0] registered as /dev/video21
+[    3.758116] bcm2835-isp bcm2835-isp: Device node capture[1] registered as /dev/video22
+[    3.758300] bcm2835-isp bcm2835-isp: Device node stats[2] registered as /dev/video23
+[    3.758319] bcm2835-isp bcm2835-isp: Register output node 0 with media controller
+[    3.758331] bcm2835-isp bcm2835-isp: Register capture node 1 with media controller
+[    3.758340] bcm2835-isp bcm2835-isp: Register capture node 2 with media controller
+[    3.758349] bcm2835-isp bcm2835-isp: Register capture node 3 with media controller
+[    3.758443] bcm2835-isp bcm2835-isp: Loaded V4L2 bcm2835-isp
+[    3.838728] [drm] Initialized v3d 1.0.0 20180419 for fec00000.v3d on minor 0
+[    3.891426] unimac-mdio unimac-mdio.-19: Broadcom UniMAC MDIO bus
+[    4.009696] [drm] No displays found. Consider forcing hotplug if HDMI is attached
+[    4.009734] vc4-drm gpu: bound fe600000.firmwarekms (ops vc4_fkms_ops [vc4])
+[    4.010692] [drm] Initialized vc4 0.0.0 20140616 for gpu on minor 1
+[    4.010750] vc4-drm gpu: [drm] No compatible format found
+[    4.010761] vc4-drm gpu: [drm] Cannot find any crtc or sizes
+[    4.100811] Bluetooth: Core ver 2.22
+[    4.100920] NET: Registered PF_BLUETOOTH protocol family
+[    4.100930] Bluetooth: HCI device and connection manager initialized
+[    4.100946] Bluetooth: HCI socket layer initialized
+[    4.100956] Bluetooth: L2CAP socket layer initialized
+[    4.100972] Bluetooth: SCO socket layer initialized
+[    4.143531] cfg80211: Loading compiled-in X.509 certificates for regulatory database
+[    4.159542] Loaded X.509 cert 'benh@debian.org: 577e021cb980e0e820821ba7b54b4961b8b4fadf'
+[    4.159919] Loaded X.509 cert 'romain.perier@gmail.com: 3abbc6ec146e09d1b6016ab9d6cf71dd233f0328'
+[    4.160266] Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+[    4.160610] Loaded X.509 cert 'wens: 61c038651aabdcf94bd0ac7ff06c7248db18c600'
+[    4.215508] Bluetooth: HCI UART driver ver 2.3
+[    4.215549] Bluetooth: HCI UART protocol H4 registered
+[    4.215651] Bluetooth: HCI UART protocol Three-wire (H5) registered
+[    4.344646] Bluetooth: HCI UART protocol Intel registered
+[    4.387933] brcmfmac: F1 signature read @0x18000000=0x15264345
+[    4.398590] brcmfmac: brcmf_fw_alloc_request: using brcm/brcmfmac43455-sdio for chip BCM4345/6
+[    4.404293] hci_uart_bcm serial0-0: supply vbat not found, using dummy regulator
+[    4.413983] hci_uart_bcm serial0-0: supply vddio not found, using dummy regulator
+[    4.420407] EXT4-fs (sda7): mounted filesystem 3ddcf6ab-a95f-41f2-b05b-62461e1eac89 r/w with ordered data mode. Quota mode: none.
+[    4.432603] Bluetooth: HCI UART protocol Broadcom registered
+[    4.448159] Bluetooth: HCI UART protocol QCA registered
+[    4.448187] Bluetooth: HCI UART protocol AG6XX registered
+[    4.450222] Bluetooth: HCI UART protocol Marvell registered
+[    4.513391] bcmgenet fd580000.ethernet end0: renamed from eth0
+[    4.532345] uart-pl011 fe201000.serial: no DMA platform data
+[    4.613314] usbcore: registered new interface driver brcmfmac
+[    4.666983] brcmfmac: brcmf_c_process_txcap_blob: no txcap_blob available (err=-2)
+[    4.667449] brcmfmac: brcmf_c_preinit_dcmds: Firmware: BCM4345/6 wl0: Nov  1 2021 00:37:25 version 7.45.241 (1a2f2fa CY) FWID 01-703fd60
+[    4.777818] Bluetooth: hci0: BCM: chip id 107
+[    4.778795] Bluetooth: hci0: BCM: features 0x2f
+[    4.779861] Bluetooth: hci0: BCM4345C0
+[    4.779881] Bluetooth: hci0: BCM4345C0 (003.001.025) build 0000
+[    4.783059] Bluetooth: hci0: BCM4345C0 'brcm/BCM4345C0.raspberrypi,4-model-b.hcd' Patch
+[    4.860815] EXT4-fs (sda8): mounted filesystem d22ae0d9-4f72-40cc-9849-35d9bfaa8645 r/w with ordered data mode. Quota mode: none.
+[    4.925166] EXT4-fs (sda8): resizing filesystem from 60871209 to 60871209 blocks
+[    4.976609] Adding 2638084k swap on /mnt/data/swapfile.  Priority:-2 extents:12 across:3334404k SS
+[    5.175804] EXT4-fs (zram2): mounted filesystem 9fdd1429-a3a8-463b-b42a-85093c2a39ca r/w without journal. Quota mode: none.
+[    5.379395] systemd-journald[128]: Received client request to flush runtime journal.
+[    5.382526] systemd-journald[128]: File /var/log/journal/db3f75bd4af9463dad7ce56bc4312948/system.journal corrupted or uncleanly shut down, renaming and replacing.
+[    5.520029] Bluetooth: hci0: BCM: features 0x2f
+[    5.521395] Bluetooth: hci0: BCM43455 37.4MHz Raspberry Pi 3+-0190
+[    5.521415] Bluetooth: hci0: BCM4345C0 (003.001.025) build 0382
+[    5.595208] audit: type=1334 audit(1716846517.959:4): prog-id=8 op=LOAD
+[    6.105596] audit: type=1334 audit(1716846518.467:5): prog-id=9 op=LOAD
+[    6.106125] audit: type=1334 audit(1716846518.467:6): prog-id=10 op=LOAD
+[    6.106277] audit: type=1334 audit(1716846518.467:7): prog-id=11 op=LOAD
+[    6.280338] audit: type=1334 audit(1716846518.643:8): prog-id=12 op=LOAD
+[    6.280750] audit: type=1334 audit(1716846518.643:9): prog-id=13 op=LOAD
+[    6.280900] audit: type=1334 audit(1716846518.643:10): prog-id=14 op=LOAD
+[    6.347018] Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+[    6.347034] Bluetooth: BNEP filters: protocol multicast
+[    6.347046] Bluetooth: BNEP socket layer initialized
+[    6.348757] Bluetooth: MGMT ver 1.22
+[    6.353195] NET: Registered PF_ALG protocol family
+[    6.463138] bcmgenet fd580000.ethernet: configuring instance for external RGMII (RX delay)
+[    6.465675] bcmgenet fd580000.ethernet end0: Link is Down
+[    6.500154] brcmfmac: brcmf_cfg80211_set_power_mgmt: power save enabled
+[   10.559733] bcmgenet fd580000.ethernet end0: Link is Up - 1Gbps/Full - flow control off
+[   13.241765] audit: type=1334 audit(1716846525.603:11): prog-id=15 op=LOAD
+[   13.548879] audit: type=1400 audit(1724512686.930:12): apparmor="STATUS" operation="profile_load" profile="unconfined" name="hassio-supervisor" pid=586 comm="apparmor_parser"
+[   13.548905] audit: type=1400 audit(1724512686.930:12): apparmor="STATUS" operation="profile_load" profile="unconfined" name="hassio-supervisor///usr/bin/gdbus" pid=586 comm="apparmor_parser"
+[   13.548914] audit: type=1400 audit(1724512686.930:12): apparmor="STATUS" operation="profile_load" profile="unconfined" name="hassio-supervisor///usr/bin/git" pid=586 comm="apparmor_parser"
+[   13.548923] audit: type=1300 audit(1724512686.930:12): arch=c00000b7 syscall=64 success=yes exit=39339 a0=6 a1=559d6e6e00 a2=99ab a3=1 items=0 ppid=585 pid=586 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="apparmor_parser" exe="/usr/sbin/apparmor_parser" subj=unconfined key=(null)
+[   13.548931] audit: type=1327 audit(1724512686.930:12): proctitle=61707061726D6F725F706172736572002D72002D57002D4C002F6D6E742F646174612F73757065727669736F722F61707061726D6F722F6361636865002F6D6E742F646174612F73757065727669736F722F61707061726D6F722F68617373696F2D73757065727669736F72
+[   14.204310] audit: type=1400 audit(1724512687.590:13): apparmor="STATUS" operation="profile_load" profile="unconfined" name="docker-default" pid=613 comm="apparmor_parser"
+[   14.204336] audit: type=1300 audit(1724512687.590:13): arch=c00000b7 syscall=64 success=yes exit=8481 a0=4 a1=55af919580 a2=2121 a3=1 items=0 ppid=612 pid=613 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="apparmor_parser" exe="/usr/sbin/apparmor_parser" subj=unconfined key=(null)
+[   14.204344] audit: type=1327 audit(1724512687.590:13): proctitle=61707061726D6F725F706172736572002D4B72002F6D6E742F646174612F646F636B65722F746D702F646F636B65722D64656661756C7432373038303937333239
+[   14.833651] audit: type=1325 audit(1724512688.218:14): table=nat:2 family=2 entries=2 op=nft_register_chain pid=637 subj=unconfined comm="iptables"
+[   15.019974] Initializing XFRM netlink socket
+[   16.210688] hassio: port 1(vethaee8846) entered blocking state
+[   16.210704] hassio: port 1(vethaee8846) entered disabled state
+[   16.210730] vethaee8846: entered allmulticast mode
+[   16.210840] vethaee8846: entered promiscuous mode
+[   16.211129] hassio: port 1(vethaee8846) entered blocking state
+[   16.211139] hassio: port 1(vethaee8846) entered forwarding state
+[   16.211977] hassio: port 1(vethaee8846) entered disabled state
+[   16.754775] eth0: renamed from vethc78ed11
+[   16.773243] hassio: port 1(vethaee8846) entered blocking state
+[   16.773272] hassio: port 1(vethaee8846) entered forwarding state
+[   17.393466] docker0: port 1(vethe4c3283) entered blocking state
+[   17.393482] docker0: port 1(vethe4c3283) entered disabled state
+[   17.393512] vethe4c3283: entered allmulticast mode
+[   17.393630] vethe4c3283: entered promiscuous mode
+[   17.471041] hassio: port 2(veth12fa17e) entered blocking state
+[   17.471062] hassio: port 2(veth12fa17e) entered disabled state
+[   17.471096] veth12fa17e: entered allmulticast mode
+[   17.471233] veth12fa17e: entered promiscuous mode
+[   17.471515] hassio: port 2(veth12fa17e) entered blocking state
+[   17.471527] hassio: port 2(veth12fa17e) entered forwarding state
+[   17.831656] eth0: renamed from veth499813d
+[   17.852209] hassio: port 2(veth12fa17e) entered disabled state
+[   17.852395] docker0: port 1(vethe4c3283) entered blocking state
+[   17.852406] docker0: port 1(vethe4c3283) entered forwarding state
+[   17.936095] eth1: renamed from veth2f530f1
+[   17.965366] hassio: port 2(veth12fa17e) entered blocking state
+[   17.965396] hassio: port 2(veth12fa17e) entered forwarding state
+[   21.888919] kauditd_printk_skb: 315 callbacks suppressed
+[   21.888929] audit: type=1334 audit(1724512695.262:120): prog-id=23 op=LOAD
+[   21.889430] audit: type=1334 audit(1724512695.262:121): prog-id=24 op=LOAD
+[   21.889551] audit: type=1334 audit(1724512695.262:122): prog-id=25 op=LOAD
+[   22.707542] audit: type=1400 audit(1724512696.076:123): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="hassio-supervisor" pid=1241 comm="apparmor_parser"
+[   22.707570] audit: type=1400 audit(1724512696.076:123): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="hassio-supervisor///usr/bin/gdbus" pid=1241 comm="apparmor_parser"
+[   22.707579] audit: type=1400 audit(1724512696.076:123): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="hassio-supervisor///usr/bin/git" pid=1241 comm="apparmor_parser"
+[   22.707589] audit: type=1300 audit(1724512696.076:123): arch=c00000b7 syscall=64 success=yes exit=39339 a0=6 a1=558743fe00 a2=99ab a3=1 items=0 ppid=1240 pid=1241 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="apparmor_parser" exe="/usr/sbin/apparmor_parser" subj=unconfined key=(null)
+[   22.707616] audit: type=1327 audit(1724512696.076:123): proctitle=61707061726D6F725F706172736572002D2D7265706C616365002D2D77726974652D6361636865002D2D63616368652D6C6F63002F6D6E742F646174612F73757065727669736F722F61707061726D6F722F6361636865002F6D6E742F646174612F73757065727669736F722F61707061726D6F722F68617373696F2D737570
+[   23.029270] hassio: port 3(vethf54c6e3) entered blocking state
+[   23.029297] hassio: port 3(vethf54c6e3) entered disabled state
+[   23.029341] vethf54c6e3: entered allmulticast mode
+[   23.029605] vethf54c6e3: entered promiscuous mode
+[   23.033206] audit: type=1700 audit(1724512696.400:124): dev=vethf54c6e3 prom=256 old_prom=0 auid=4294967295 uid=0 gid=0 ses=4294967295
+[   23.033233] audit: type=1300 audit(1724512696.400:124): arch=c00000b7 syscall=206 success=yes exit=40 a0=d a1=40015faa20 a2=28 a3=0 items=0 ppid=1 pid=591 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="dockerd" exe="/usr/bin/dockerd" subj=unconfined key=(null)
+[   23.423407] eth0: renamed from vethd19e393
+[   23.449483] hassio: port 3(vethf54c6e3) entered blocking state
+[   23.449518] hassio: port 3(vethf54c6e3) entered forwarding state
+[   23.803262] hassio: port 4(veth77e0d81) entered blocking state
+[   23.803281] hassio: port 4(veth77e0d81) entered disabled state
+[   23.803321] veth77e0d81: entered allmulticast mode
+[   23.803456] veth77e0d81: entered promiscuous mode
+[   23.803765] hassio: port 4(veth77e0d81) entered blocking state
+[   23.803781] hassio: port 4(veth77e0d81) entered forwarding state
+[   24.031085] hassio: port 4(veth77e0d81) entered disabled state
+[   24.204730] eth0: renamed from vethb299565
+[   24.237245] hassio: port 4(veth77e0d81) entered blocking state
+[   24.237270] hassio: port 4(veth77e0d81) entered forwarding state
+[   24.548659] hassio: port 5(veth381adf7) entered blocking state
+[   24.548694] hassio: port 5(veth381adf7) entered disabled state
+[   24.549034] veth381adf7: entered allmulticast mode
+[   24.549237] veth381adf7: entered promiscuous mode
+[   24.549611] hassio: port 5(veth381adf7) entered blocking state
+[   24.549628] hassio: port 5(veth381adf7) entered forwarding state
+[   24.953793] eth0: renamed from veth09bfb32
+[   26.733913] Bluetooth: RFCOMM TTY layer initialized
+[   26.733943] Bluetooth: RFCOMM socket layer initialized
+[   26.733968] Bluetooth: RFCOMM ver 1.11
+[   28.371539] hassio: port 6(veth22c1cce) entered blocking state
+[   28.371557] hassio: port 6(veth22c1cce) entered disabled state
+[   28.371590] veth22c1cce: entered allmulticast mode
+[   28.372091] veth22c1cce: entered promiscuous mode
+[   28.372156] kauditd_printk_skb: 143 callbacks suppressed
+[   28.372162] audit: type=1700 audit(1724512701.732:175): dev=veth22c1cce prom=256 old_prom=0 auid=4294967295 uid=0 gid=0 ses=4294967295
+[   28.372221] audit: type=1300 audit(1724512701.732:175): arch=c00000b7 syscall=206 success=yes exit=40 a0=d a1=4000f45cb0 a2=28 a3=0 items=0 ppid=1 pid=591 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="dockerd" exe="/usr/bin/dockerd" subj=unconfined key=(null)
+[   28.372232] audit: type=1327 audit(1724512701.732:175): proctitle=2F7573722F62696E2F646F636B657264002D480066643A2F2F002D2D636F6E7461696E6572643D2F72756E2F636F6E7461696E6572642F636F6E7461696E6572642E736F636B
+[   28.591687] audit: type=1334 audit(1724512701.952:176): prog-id=42 op=LOAD
+[   28.592713] audit: type=1334 audit(1724512701.952:177): prog-id=43 op=LOAD
+[   28.592731] audit: type=1300 audit(1724512701.952:177): arch=c00000b7 syscall=280 success=yes exit=16 a0=5 a1=400011d840 a2=78 a3=0 items=0 ppid=2071 pid=2081 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="runc" exe="/usr/bin/runc" subj=unconfined key=(null)
+[   28.592740] audit: type=1327 audit(1724512701.952:177): proctitle=72756E63002D2D726F6F74002F7661722F72756E2F646F636B65722F72756E74696D652D72756E632F6D6F6279002D2D6C6F67002F72756E2F636F6E7461696E6572642F696F2E636F6E7461696E6572642E72756E74696D652E76322E7461736B2F6D6F62792F66386637643032663865396138373232336633333735303866
+[   28.593242] audit: type=1334 audit(1724512701.952:178): prog-id=44 op=LOAD
+[   28.593259] audit: type=1300 audit(1724512701.952:178): arch=c00000b7 syscall=280 success=yes exit=18 a0=5 a1=400011d5d0 a2=78 a3=0 items=0 ppid=2071 pid=2081 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="runc" exe="/usr/bin/runc" subj=unconfined key=(null)
+[   28.593267] audit: type=1327 audit(1724512701.952:178): proctitle=72756E63002D2D726F6F74002F7661722F72756E2F646F636B65722F72756E74696D652D72756E632F6D6F6279002D2D6C6F67002F72756E2F636F6E7461696E6572642F696F2E636F6E7461696E6572642E72756E74696D652E76322E7461736B2F6D6F62792F66386637643032663865396138373232336633333735303866
+[   28.762938] eth0: renamed from veth1a4bb4d
+[   28.797186] hassio: port 6(veth22c1cce) entered blocking state
+[   28.797220] hassio: port 6(veth22c1cce) entered forwarding state
+[   29.114773] hassio: port 7(vethdc67e5c) entered blocking state
+[   29.114794] hassio: port 7(vethdc67e5c) entered disabled state
+[   29.114836] vethdc67e5c: entered allmulticast mode
+[   29.115003] vethdc67e5c: entered promiscuous mode
+[   29.115344] hassio: port 7(vethdc67e5c) entered blocking state
+[   29.115357] hassio: port 7(vethdc67e5c) entered forwarding state
+[   29.402760] hassio: port 7(vethdc67e5c) entered disabled state
+[   29.717083] eth0: renamed from veth5c7e6fa
+[   29.732736] hassio: port 7(vethdc67e5c) entered blocking state
+[   29.732766] hassio: port 7(vethdc67e5c) entered forwarding state
+[   35.264780] kauditd_printk_skb: 112 callbacks suppressed
+[   35.264790] audit: type=1334 audit(1724512708.621:217): prog-id=50 op=LOAD
+[   35.268055] audit: type=1334 audit(1724512708.621:218): prog-id=51 op=LOAD
+[   35.268094] audit: type=1300 audit(1724512708.621:218): arch=c00000b7 syscall=280 success=yes exit=16 a0=5 a1=400016b840 a2=78 a3=0 items=0 ppid=2738 pid=2748 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="runc" exe="/usr/bin/runc" subj=unconfined key=(null)
+[   35.268104] audit: type=1327 audit(1724512708.621:218): proctitle=72756E63002D2D726F6F74002F7661722F72756E2F646F636B65722F72756E74696D652D72756E632F6D6F6279002D2D6C6F67002F72756E2F636F6E7461696E6572642F696F2E636F6E7461696E6572642E72756E74696D652E76322E7461736B2F6D6F62792F36326263356135636534306638356139313438323434613633
+[   35.268117] audit: type=1334 audit(1724512708.621:219): prog-id=52 op=LOAD
+[   35.268124] audit: type=1300 audit(1724512708.621:219): arch=c00000b7 syscall=280 success=yes exit=18 a0=5 a1=400016b5d0 a2=78 a3=0 items=0 ppid=2738 pid=2748 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="runc" exe="/usr/bin/runc" subj=unconfined key=(null)
+[   35.268132] audit: type=1327 audit(1724512708.621:219): proctitle=72756E63002D2D726F6F74002F7661722F72756E2F646F636B65722F72756E74696D652D72756E632F6D6F6279002D2D6C6F67002F72756E2F636F6E7461696E6572642F696F2E636F6E7461696E6572642E72756E74696D652E76322E7461736B2F6D6F62792F36326263356135636534306638356139313438323434613633
+[   35.268142] audit: type=1334 audit(1724512708.621:220): prog-id=52 op=UNLOAD
+[   35.268148] audit: type=1300 audit(1724512708.621:220): arch=c00000b7 syscall=57 success=yes exit=0 a0=12 a1=0 a2=0 a3=0 items=0 ppid=2738 pid=2748 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="runc" exe="/usr/bin/runc" subj=unconfined key=(null)
+[   35.268187] audit: type=1327 audit(1724512708.621:220): proctitle=72756E63002D2D726F6F74002F7661722F72756E2F646F636B65722F72756E74696D652D72756E632F6D6F6279002D2D6C6F67002F72756E2F636F6E7461696E6572642F696F2E636F6E7461696E6572642E72756E74696D652E76322E7461736B2F6D6F62792F36326263356135636534306638356139313438323434613633
+[   36.290111] hassio: port 8(veth91ad2a2) entered blocking state
+[   36.290147] hassio: port 8(veth91ad2a2) entered disabled state
+[   36.290204] veth91ad2a2: entered allmulticast mode
+[   36.290640] veth91ad2a2: entered promiscuous mode
+[   36.878269] eth0: renamed from veth5297323
+[   36.898778] hassio: port 8(veth91ad2a2) entered blocking state
+[   36.898818] hassio: port 8(veth91ad2a2) entered forwarding state
+[   37.369121] hassio: port 9(veth9c77ff0) entered blocking state
+[   37.369150] hassio: port 9(veth9c77ff0) entered disabled state
+[   37.369389] veth9c77ff0: entered allmulticast mode
+[   37.369592] veth9c77ff0: entered promiscuous mode
+[   37.374342] hassio: port 9(veth9c77ff0) entered blocking state
+[   37.374372] hassio: port 9(veth9c77ff0) entered forwarding state
+[   37.380090] hassio: port 9(veth9c77ff0) entered disabled state
+[   38.295127] eth0: renamed from veth7995a02
+[   38.328940] hassio: port 9(veth9c77ff0) entered blocking state
+[   38.328979] hassio: port 9(veth9c77ff0) entered forwarding state
+[   39.016353] hassio: port 10(vethe68f946) entered blocking state
+[   39.016380] hassio: port 10(vethe68f946) entered disabled state
+[   39.016428] vethe68f946: entered allmulticast mode
+[   39.016600] vethe68f946: entered promiscuous mode
+[   39.016964] hassio: port 10(vethe68f946) entered blocking state
+[   39.016976] hassio: port 10(vethe68f946) entered forwarding state
+[   39.023154] hassio: port 10(vethe68f946) entered disabled state
+[   40.085421] eth0: renamed from vethca23c02
+[   40.108740] hassio: port 10(vethe68f946) entered blocking state
+[   40.108781] hassio: port 10(vethe68f946) entered forwarding state
+[   41.303344] kauditd_printk_skb: 169 callbacks suppressed
+[   41.303359] audit: type=1334 audit(1724512714.653:280): prog-id=70 op=LOAD
+[   41.306150] audit: type=1334 audit(1724512714.657:281): prog-id=71 op=LOAD
+[   41.306243] audit: type=1300 audit(1724512714.657:281): arch=c00000b7 syscall=280 success=yes exit=16 a0=5 a1=4000195840 a2=78 a3=0 items=0 ppid=3789 pid=3804 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="runc" exe="/usr/bin/runc" subj=unconfined key=(null)
+[   41.306289] audit: type=1327 audit(1724512714.657:281): proctitle=72756E63002D2D726F6F74002F7661722F72756E2F646F636B65722F72756E74696D652D72756E632F6D6F6279002D2D6C6F67002F72756E2F636F6E7461696E6572642F696F2E636F6E7461696E6572642E72756E74696D652E76322E7461736B2F6D6F62792F38366239643934653362656265656363653632386361373166
+[   41.306663] audit: type=1334 audit(1724512714.657:282): prog-id=72 op=LOAD
+[   41.306762] audit: type=1300 audit(1724512714.657:282): arch=c00000b7 syscall=280 success=yes exit=18 a0=5 a1=40001955d0 a2=78 a3=0 items=0 ppid=3789 pid=3804 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="runc" exe="/usr/bin/runc" subj=unconfined key=(null)
+[   41.306799] audit: type=1327 audit(1724512714.657:282): proctitle=72756E63002D2D726F6F74002F7661722F72756E2F646F636B65722F72756E74696D652D72756E632F6D6F6279002D2D6C6F67002F72756E2F636F6E7461696E6572642F696F2E636F6E7461696E6572642E72756E74696D652E76322E7461736B2F6D6F62792F38366239643934653362656265656363653632386361373166
+[   41.306910] audit: type=1334 audit(1724512714.657:283): prog-id=72 op=UNLOAD
+[   41.306984] audit: type=1300 audit(1724512714.657:283): arch=c00000b7 syscall=57 success=yes exit=0 a0=12 a1=0 a2=0 a3=0 items=0 ppid=3789 pid=3804 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="runc" exe="/usr/bin/runc" subj=unconfined key=(null)
+[   41.307005] audit: type=1327 audit(1724512714.657:283): proctitle=72756E63002D2D726F6F74002F7661722F72756E2F646F636B65722F72756E74696D652D72756E632F6D6F6279002D2D6C6F67002F72756E2F636F6E7461696E6572642F696F2E636F6E7461696E6572642E72756E74696D652E76322E7461736B2F6D6F62792F38366239643934653362656265656363653632386361373166
+[   52.124679] kauditd_printk_skb: 22 callbacks suppressed
+[   52.124687] audit: type=1334 audit(1724512725.473:292): prog-id=14 op=UNLOAD
+[   52.124702] audit: type=1334 audit(1724512725.473:293): prog-id=13 op=UNLOAD
+[   52.124708] audit: type=1334 audit(1724512725.473:294): prog-id=12 op=UNLOAD
+[   52.213529] audit: type=1334 audit(1724512725.561:295): prog-id=23 op=UNLOAD
+[   52.215603] audit: type=1334 audit(1724512725.561:296): prog-id=25 op=UNLOAD
+[   52.216581] audit: type=1334 audit(1724512725.565:297): prog-id=24 op=UNLOAD
+[   64.187918] warning: `matter-server' uses wireless extensions which will stop working for Wi-Fi 7 hardware; use nl80211
+[   78.748527] audit: type=1334 audit(1724512752.089:298): prog-id=78 op=LOAD
+[   78.749087] audit: type=1300 audit(1724512752.089:298): arch=c00000b7 syscall=280 success=yes exit=15 a0=5 a1=40001eb840 a2=78 a3=0 items=0 ppid=6011 pid=6021 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="runc" exe="/usr/bin/runc" subj=unconfined key=(null)
+[   78.749145] audit: type=1327 audit(1724512752.089:298): proctitle=72756E63002D2D726F6F74002F7661722F72756E2F646F636B65722F72756E74696D652D72756E632F6D6F6279002D2D6C6F67002F72756E2F636F6E7461696E6572642F696F2E636F6E7461696E6572642E72756E74696D652E76322E7461736B2F6D6F62792F63383361633635323137316436636134636366656335633863
+[   78.749605] audit: type=1334 audit(1724512752.093:299): prog-id=79 op=LOAD
+[   78.750809] audit: type=1300 audit(1724512752.093:299): arch=c00000b7 syscall=280 success=yes exit=17 a0=5 a1=40001eb5d0 a2=78 a3=0 items=0 ppid=6011 pid=6021 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="runc" exe="/usr/bin/runc" subj=unconfined key=(null)
+[   78.750849] audit: type=1327 audit(1724512752.093:299): proctitle=72756E63002D2D726F6F74002F7661722F72756E2F646F636B65722F72756E74696D652D72756E632F6D6F6279002D2D6C6F67002F72756E2F636F6E7461696E6572642F696F2E636F6E7461696E6572642E72756E74696D652E76322E7461736B2F6D6F62792F63383361633635323137316436636134636366656335633863
+[   78.750939] audit: type=1334 audit(1724512752.093:300): prog-id=79 op=UNLOAD
+[   78.750994] audit: type=1300 audit(1724512752.093:300): arch=c00000b7 syscall=57 success=yes exit=0 a0=11 a1=0 a2=0 a3=0 items=0 ppid=6011 pid=6021 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="runc" exe="/usr/bin/runc" subj=unconfined key=(null)
+[   78.751911] audit: type=1327 audit(1724512752.093:300): proctitle=72756E63002D2D726F6F74002F7661722F72756E2F646F636B65722F72756E74696D652D72756E632F6D6F6279002D2D6C6F67002F72756E2F636F6E7461696E6572642F696F2E636F6E7461696E6572642E72756E74696D652E76322E7461736B2F6D6F62792F63383361633635323137316436636134636366656335633863
+[   78.752224] audit: type=1334 audit(1724512752.097:301): prog-id=78 op=UNLOAD
+[  119.443868] hassio: port 11(veth25cae3f) entered blocking state
+[  119.443894] hassio: port 11(veth25cae3f) entered disabled state
+[  119.443936] veth25cae3f: entered allmulticast mode
+[  119.444088] veth25cae3f: entered promiscuous mode
+[  119.444457] hassio: port 11(veth25cae3f) entered blocking state
+[  119.444474] hassio: port 11(veth25cae3f) entered forwarding state
+[  119.445863] kauditd_printk_skb: 5 callbacks suppressed
+[  119.445875] audit: type=1700 audit(1724512792.790:303): dev=veth25cae3f prom=256 old_prom=0 auid=4294967295 uid=0 gid=0 ses=4294967295
+[  119.445900] audit: type=1300 audit(1724512792.790:303): arch=c00000b7 syscall=206 success=yes exit=40 a0=d a1=40008d0150 a2=28 a3=0 items=0 ppid=1 pid=591 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="dockerd" exe="/usr/bin/dockerd" subj=unconfined key=(null)
+[  119.445909] audit: type=1327 audit(1724512792.790:303): proctitle=2F7573722F62696E2F646F636B657264002D480066643A2F2F002D2D636F6E7461696E6572643D2F72756E2F636F6E7461696E6572642F636F6E7461696E6572642E736F636B
+[  119.446042] hassio: port 11(veth25cae3f) entered disabled state
+[  119.512641] audit: type=1325 audit(1724512792.858:304): table=nat:96 family=2 entries=1 op=nft_register_rule pid=6321 subj=unconfined comm="iptables"
+[  119.512696] audit: type=1300 audit(1724512792.858:304): arch=c00000b7 syscall=211 success=yes exit=508 a0=3 a1=7fc2bc8bb8 a2=0 a3=1 items=0 ppid=591 pid=6321 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="iptables" exe="/usr/sbin/xtables-nft-multi" subj=unconfined key=(null)
+[  119.512729] audit: type=1327 audit(1724512792.858:304): proctitle=2F7573722F7362696E2F69707461626C6573002D2D77616974002D74006E6174002D4100444F434B4552002D7000746370002D6400302F30002D2D64706F72740031363237002D6A00444E4154002D2D746F2D64657374696E6174696F6E003137322E33302E33332E353A313632370000002D690068617373696F
+[  119.520532] audit: type=1325 audit(1724512792.866:305): table=filter:97 family=2 entries=1 op=nft_register_rule pid=6323 subj=unconfined comm="iptables"
+[  119.520553] audit: type=1300 audit(1724512792.866:305): arch=c00000b7 syscall=211 success=yes exit=648 a0=3 a1=7fd7bcb0a8 a2=0 a3=1 items=0 ppid=591 pid=6323 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="iptables" exe="/usr/sbin/xtables-nft-multi" subj=unconfined key=(null)
+[  119.520561] audit: type=1327 audit(1724512792.866:305): proctitle=2F7573722F7362696E2F69707461626C6573002D2D77616974002D740066696C746572002D4100444F434B45520000002D690068617373696F002D6F0068617373696F002D7000746370002D64003137322E33302E33332E35002D2D64706F72740031363237002D6A00414343455054
+[  119.530867] audit: type=1325 audit(1724512792.874:306): table=nat:98 family=2 entries=1 op=nft_register_rule pid=6325 subj=unconfined comm="iptables"
+[  119.958289] eth0: renamed from veth9164573
+[  119.981106] hassio: port 11(veth25cae3f) entered blocking state
+[  119.981128] hassio: port 11(veth25cae3f) entered forwarding state
+[  120.292164] hassio: port 12(veth8a03838) entered blocking state
+[  120.292187] hassio: port 12(veth8a03838) entered disabled state
+[  120.292228] veth8a03838: entered allmulticast mode
+[  120.292400] veth8a03838: entered promiscuous mode
+[  120.292719] hassio: port 12(veth8a03838) entered blocking state
+[  120.292734] hassio: port 12(veth8a03838) entered forwarding state
+[  120.446662] hassio: port 12(veth8a03838) entered disabled state
+[  120.894659] eth0: renamed from veth8609004
+[  120.920455] hassio: port 12(veth8a03838) entered blocking state
+[  120.920478] hassio: port 12(veth8a03838) entered forwarding state
+[  121.317813] hassio: port 13(veth74670fd) entered blocking state
+[  121.317832] hassio: port 13(veth74670fd) entered disabled state
+[  121.317872] veth74670fd: entered allmulticast mode
+[  121.319513] veth74670fd: entered promiscuous mode
+[  121.323524] hassio: port 13(veth74670fd) entered blocking state
+[  121.323553] hassio: port 13(veth74670fd) entered forwarding state
+[  121.450678] hassio: port 13(veth74670fd) entered disabled state
+[  122.087518] eth0: renamed from vethc8fac7a
+[  122.106906] hassio: port 13(veth74670fd) entered blocking state
+[  122.106931] hassio: port 13(veth74670fd) entered forwarding state
+[  127.287402] kauditd_printk_skb: 137 callbacks suppressed
+[  127.287414] audit: type=1334 audit(1724512800.631:354): prog-id=93 op=LOAD
+[  127.288064] audit: type=1334 audit(1724512800.635:355): prog-id=94 op=LOAD
+[  127.288258] audit: type=1334 audit(1724512800.635:356): prog-id=95 op=LOAD
+[  128.051298] audit: type=1334 audit(1724512801.399:357): prog-id=96 op=LOAD
+[  128.051868] audit: type=1334 audit(1724512801.399:358): prog-id=97 op=LOAD
+[  128.052036] audit: type=1334 audit(1724512801.399:359): prog-id=98 op=LOAD
+[  158.180625] audit: type=1334 audit(1724512831.533:360): prog-id=95 op=UNLOAD
+[  158.180646] audit: type=1334 audit(1724512831.533:361): prog-id=94 op=UNLOAD
+[  158.180653] audit: type=1334 audit(1724512831.533:362): prog-id=93 op=UNLOAD
+[  158.608550] audit: type=1334 audit(1724512831.961:363): prog-id=98 op=UNLOAD
+[  158.609010] audit: type=1334 audit(1724512831.961:364): prog-id=97 op=UNLOAD
+[  158.609042] audit: type=1334 audit(1724512831.961:365): prog-id=96 op=UNLOAD
+[  642.213052] audit: type=1334 audit(1724513315.574:366): prog-id=54 op=UNLOAD
+[  642.236519] audit: type=1334 audit(1724513315.598:367): prog-id=57 op=UNLOAD
+[  642.781393] audit: type=1334 audit(1724513316.142:368): prog-id=99 op=LOAD
+[  642.783310] audit: type=1334 audit(1724513316.142:369): prog-id=100 op=LOAD
+[  642.783325] audit: type=1300 audit(1724513316.142:369): arch=c00000b7 syscall=280 success=yes exit=16 a0=5 a1=400016b840 a2=78 a3=0 items=0 ppid=8564 pid=8573 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="runc" exe="/usr/bin/runc" subj=unconfined key=(null)
+[  642.783334] audit: type=1327 audit(1724513316.142:369): proctitle=72756E63002D2D726F6F74002F7661722F72756E2F646F636B65722F72756E74696D652D72756E632F6D6F6279002D2D6C6F67002F72756E2F636F6E7461696E6572642F696F2E636F6E7461696E6572642E72756E74696D652E76322E7461736B2F6D6F62792F65373035643833643437663232643434313663623261633539
+[  642.783346] audit: type=1334 audit(1724513316.142:370): prog-id=101 op=LOAD
+[  642.783354] audit: type=1300 audit(1724513316.142:370): arch=c00000b7 syscall=280 success=yes exit=18 a0=5 a1=400016b5d0 a2=78 a3=0 items=0 ppid=8564 pid=8573 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="runc" exe="/usr/bin/runc" subj=unconfined key=(null)
+[  642.783364] audit: type=1327 audit(1724513316.142:370): proctitle=72756E63002D2D726F6F74002F7661722F72756E2F646F636B65722F72756E74696D652D72756E632F6D6F6279002D2D6C6F67002F72756E2F636F6E7461696E6572642F696F2E636F6E7461696E6572642E72756E74696D652E76322E7461736B2F6D6F62792F65373035643833643437663232643434313663623261633539
+[  642.783376] audit: type=1334 audit(1724513316.142:371): prog-id=101 op=UNLOAD
+[  872.434859] kauditd_printk_skb: 8 callbacks suppressed
+[  872.434869] audit: type=1334 audit(1724513545.800:374): prog-id=103 op=LOAD
